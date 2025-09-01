@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation Optimizer - Equation HI-LO</title>
+    <meta name="description" content="Use this interactive tool to find optimal equations for Equation HI-LO board game. Get as close as possible to 1 or 20!">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="equation-optimizer.html" class="nav-link active">Equation Optimizer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Equation Optimizer Section -->
+    <section id="equation-optimizer" class="equation-optimizer">
+        <div class="container">
+            <h1 style="color: white; margin-top: 100px;">Equation Optimizer</h1>
+            <p>Use this tool to help optimize your equations in Equation HI-LO!</p>
+            
+            <div class="optimizer-interface">
+                <div class="input-section">
+                    <h3>Available Numbers & Operations</h3>
+                    <div class="numbers-input">
+                        <label for="numbers">Numbers (1-10):</label>
+                        <input type="text" id="numbers" placeholder="e.g., 2,5,8,10" class="input-field">
+                    </div>
+                    <div class="operations">
+                        <label>Available Operations:</label>
+                        <div class="operation-checkboxes">
+                            <label><input type="checkbox" id="add" checked> + (Add)</label>
+                            <label><input type="checkbox" id="subtract" checked> - (Subtract)</label>
+                            <label><input type="checkbox" id="multiply" checked> × (Multiply)</label>
+                            <label><input type="checkbox" id="divide" checked> ÷ (Divide)</label>
+                            <label><input type="checkbox" id="sqrt" checked> √ (Square Root)</label>
+                        </div>
+                    </div>
+                    <div class="target-selection">
+                        <label for="target">Target:</label>
+                        <select id="target" class="input-field">
+                            <option value="1">Low (closest to 1)</option>
+                            <option value="20">High (closest to 20)</option>
+                        </select>
+                    </div>
+                    <button id="optimize" class="optimize-button">Find Best Equations</button>
+                </div>
+                
+                <div class="results-section">
+                    <h3>Suggested Equations</h3>
+                    <div id="results" class="results-container">
+                        <p>Enter your numbers and click "Find Best Equations" to see suggestions!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HayzGames. All rights reserved.</p>
+            <p><a href="index.html" style="color: #3498db;">← Back to Home</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
