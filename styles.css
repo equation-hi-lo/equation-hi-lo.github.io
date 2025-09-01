@@ -1,0 +1,394 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #2c3e50;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0 80px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+.cta-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.6);
+}
+
+.hero-image {
+    margin-top: 4rem;
+}
+
+.game-screenshot {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background-color: white;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #3498db;
+    margin: 20px auto;
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: #34495e;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* How to Play Section */
+.how-to-play {
+    background-color: white;
+}
+
+.gameplay-description p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+/* Features Section */
+.features {
+    background-color: #ecf0f1;
+}
+
+/* Reviews Section */
+.reviews {
+    background-color: white;
+}
+
+.review-card {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.review-card h5 {
+    color: #2c3e50;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.review-card blockquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.review-card small {
+    color: #7f8c8d;
+    font-weight: 500;
+}
+
+/* About Section */
+.about {
+    background-color: #ecf0f1;
+    text-align: center;
+}
+
+.about p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.company-logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Equation Optimizer Section */
+.equation-optimizer {
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    color: white;
+}
+
+.equation-optimizer h2,
+.equation-optimizer h3 {
+    color: white;
+}
+
+.equation-optimizer h2::after {
+    background-color: white;
+}
+
+.optimizer-interface {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.input-section,
+.results-section {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.input-section h3,
+.results-section h3 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.numbers-input,
+.target-selection {
+    margin-bottom: 1.5rem;
+}
+
+.numbers-input label,
+.target-selection label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.operations label {
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.operation-checkboxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.operation-checkboxes label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.operation-checkboxes input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.optimize-button {
+    width: 100%;
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.optimize-button:hover {
+    background-color: #c0392b;
+}
+
+.results-container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+.equation-result {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #00cec9;
+}
+
+.equation-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.equation-value {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .optimizer-interface {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .operation-checkboxes {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+}

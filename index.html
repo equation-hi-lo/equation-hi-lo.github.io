@@ -1,1 +1,161 @@
-Hello, World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation HI-LO - A Strategic Game of Math and Poker</title>
+    <meta name="description" content="Test your math skills and strategy in Equation Hi-Lo, the ultimate blend of poker-style betting and equation-building fun!">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#equation-optimizer" class="nav-link">Equation Optimizer</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Equation HI-LO</h1>
+            <p class="hero-subtitle">A Strategic Game of Math and Poker</p>
+            <p class="hero-description">
+                Test your math skills and strategy in Equation Hi-Lo, the ultimate blend of poker-style betting and equation-building fun! 
+                Compete to create equations that get as close as possible to 1 (low) or 20 (high) while outsmarting your opponents. 
+                Do you have what it takes to claim all the chips?
+            </p>
+            <a href="https://etsy.com" target="_blank" class="cta-button">BUY ON ETSY</a>
+            
+            <!-- Game Image Placeholder -->
+            <div class="hero-image">
+                <img src="images/game-screenshot.png" alt="Equation HI-LO Game Screenshot" class="game-screenshot" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="image-placeholder" style="display: none; background: rgba(255,255,255,0.2); padding: 40px; border-radius: 10px; text-align: center;">
+                    <p style="margin: 0; font-size: 1.1rem;">🎲 Game Screenshot Coming Soon 🎯</p>
+                    <p style="margin: 10px 0 0; font-size: 0.9rem; opacity: 0.8;">Add your game screenshot to images/game-screenshot.png</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Play Section -->
+    <section id="how-to-play" class="how-to-play">
+        <div class="container">
+            <h2>How to play</h2>
+            <div class="gameplay-description">
+                <p>
+                    <strong>Build and Bet:</strong> Use randomly dealt numbers from 1-10 and arithmetic operation cards 
+                    (plus, minus, divide, multiply, square root) to construct equations that are close to 1 or 20. 
+                    You'll wager chips depending on how confident you feel about your equation.
+                </p>
+                <p>
+                    <strong>Two Ways to Win a Hand:</strong> Bet on low (closest to 1) or high (closest to 20) and have 
+                    the equation that is closest to that value. You may even be able to win a hand on a bluff. 
+                    Feeling lucky? Swing bet on both by making two equations with the same cards, one close to 1 and another close to 20.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Features</h2>
+            <h3>What's Inside</h3>
+            <!-- Features content will be added here -->
+        </div>
+    </section>
+
+    <!-- Player Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Player Reviews</h2>
+            <div class="review-card">
+                <h5>Anna</h5>
+                <blockquote>
+                    This is such a fun game! It will be a fun activity for the whole family, from young to old😃. 
+                    For the young to learn the math; for the old to exercise the brain. The game is well designed 
+                    with quality materials that will last a long time.
+                </blockquote>
+                <small>January 28, 2025</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About the game developer</h2>
+            <h3>HayzGames</h3>
+            <p>
+                We're a couple based in San Francisco and this is our first board game. We saw it on a Korean game show 
+                and wanted to play it, but couldn't find anywhere to buy it. So we made a sample for ourselves and some 
+                friends and loved it so much that we decided to make more copies for fellow board gamers.
+            </p>
+            <div class="logo">
+                <img src="images/hayzgames-logo.png" alt="HayzGames Logo" class="company-logo"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <div class="logo-placeholder" style="display: none; background: #34495e; color: white; padding: 20px 40px; border-radius: 10px; text-align: center; max-width: 200px; margin: 0 auto;">
+                    <p style="margin: 0; font-size: 1.5rem; font-weight: bold;">HayzGames</p>
+                    <p style="margin: 5px 0 0; font-size: 0.8rem; opacity: 0.7;">Logo: images/hayzgames-logo.png</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equation Optimizer Section -->
+    <section id="equation-optimizer" class="equation-optimizer">
+        <div class="container">
+            <h2>Equation Optimizer</h2>
+            <p>Use this tool to help optimize your equations in Equation HI-LO!</p>
+            
+            <div class="optimizer-interface">
+                <div class="input-section">
+                    <h3>Available Numbers & Operations</h3>
+                    <div class="numbers-input">
+                        <label for="numbers">Numbers (1-10):</label>
+                        <input type="text" id="numbers" placeholder="e.g., 2,5,8,10" class="input-field">
+                    </div>
+                    <div class="operations">
+                        <label>Available Operations:</label>
+                        <div class="operation-checkboxes">
+                            <label><input type="checkbox" id="add" checked> + (Add)</label>
+                            <label><input type="checkbox" id="subtract" checked> - (Subtract)</label>
+                            <label><input type="checkbox" id="multiply" checked> × (Multiply)</label>
+                            <label><input type="checkbox" id="divide" checked> ÷ (Divide)</label>
+                            <label><input type="checkbox" id="sqrt" checked> √ (Square Root)</label>
+                        </div>
+                    </div>
+                    <div class="target-selection">
+                        <label for="target">Target:</label>
+                        <select id="target" class="input-field">
+                            <option value="1">Low (closest to 1)</option>
+                            <option value="20">High (closest to 20)</option>
+                        </select>
+                    </div>
+                    <button id="optimize" class="optimize-button">Find Best Equations</button>
+                </div>
+                
+                <div class="results-section">
+                    <h3>Suggested Equations</h3>
+                    <div id="results" class="results-container">
+                        <p>Enter your numbers and click "Find Best Equations" to see suggestions!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 HayzGames. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
