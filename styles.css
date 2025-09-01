@@ -170,13 +170,30 @@ h3 {
     background-color: white;
 }
 
+.review-carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.review-slides {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
 .review-card {
     background-color: #f8f9fa;
     padding: 2rem;
     border-radius: 10px;
-    max-width: 600px;
-    margin: 0 auto;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.review-card.active {
+    display: block;
+    animation: fadeIn 0.5s;
 }
 
 .review-card h5 {
@@ -196,6 +213,33 @@ h3 {
 .review-card small {
     color: #7f8c8d;
     font-weight: 500;
+}
+
+.review-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bdc3c7;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dot.active,
+.dot:hover {
+    background-color: #3498db;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* About Section */

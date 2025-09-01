@@ -26,19 +26,22 @@ class EquationOptimizer {
             optimizeButton.addEventListener('click', () => this.optimizeEquations());
         }
 
-        // Smooth scrolling for navigation links
+        // Smooth scrolling for navigation links (only for anchor links)
         document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const targetId = link.getAttribute('href');
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+            const href = link.getAttribute('href');
+            if (href.startsWith('#')) {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSection = document.querySelector(href);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            }
+            // For external links like equation-optimizer.html, let them work normally
         });
     }
 
@@ -339,9 +342,73 @@ class EquationOptimizer {
     }
 }
 
-// Initialize the optimizer when the page loads
+// Review Carousel Class
+class ReviewCarousel {
+    constructor() {
+        this.currentSlide = 0;
+        this.slides = document.querySelectorAll('.review-card');
+        this.dots = document.querySelectorAll('.dot');
+        this.autoSlideInterval = null;
+        
+        if (this.slides.length > 0) {
+            this.init();
+        }
+    }
+
+    init() {
+        // Add click listeners to dots
+        this.dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => this.goToSlide(index));
+        });
+
+        // Start auto-slide
+        this.startAutoSlide();
+        
+        // Pause auto-slide on hover
+        const carousel = document.querySelector('.review-carousel');
+        if (carousel) {
+            carousel.addEventListener('mouseenter', () => this.stopAutoSlide());
+            carousel.addEventListener('mouseleave', () => this.startAutoSlide());
+        }
+    }
+
+    goToSlide(slideIndex) {
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active');
+
+        // Update current slide
+        this.currentSlide = slideIndex;
+
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active');
+    }
+
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.slides.length;
+        this.goToSlide(nextIndex);
+    }
+
+    startAutoSlide() {
+        this.stopAutoSlide(); // Clear any existing interval
+        this.autoSlideInterval = setInterval(() => {
+            this.nextSlide();
+        }, 4000); // Change slide every 4 seconds
+    }
+
+    stopAutoSlide() {
+        if (this.autoSlideInterval) {
+            clearInterval(this.autoSlideInterval);
+            this.autoSlideInterval = null;
+        }
+    }
+}
+
+// Initialize the optimizer and carousel when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     new EquationOptimizer();
+    new ReviewCarousel();
 });
 
 // Add smooth scrolling to all anchor links
