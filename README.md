@@ -1,97 +1,35 @@
-# Equation HI-LO Website
+# Equation Hi-Lo
 
-This is the GitHub Pages website for **Equation HI-LO**, a strategic board game that combines math and poker elements.
+The HayzGames product website at https://equation-hi-lo.github.io/.
+Plain HTML, CSS, and JavaScript; no package install or build step required.
 
-## 🎯 About the Game
+## Preview
 
-Equation HI-LO is a fun and engaging board game where players:
-- Use randomly dealt numbers (1-10) and operation cards (+, -, ×, ÷, √)
-- Build equations that get as close as possible to 1 (low) or 20 (high)
-- Wager chips based on confidence in their equations
-- Can win through strategy or even bluffing!
-
-## 🚀 Website Features
-
-- **Responsive Design**: Works perfectly on desktop, tablet, and mobile
-- **Interactive Equation Optimizer**: Built-in tool to help find optimal equations
-- **Modern UI**: Clean, professional design with smooth animations
-- **SEO Optimized**: Proper meta tags and semantic HTML
-
-## 🛠 Technical Stack
-
-- **Frontend**: Pure HTML5, CSS3, and JavaScript (no frameworks needed)
-- **Hosting**: GitHub Pages (free hosting)
-- **Domain**: Can be configured to use custom domain equation-hi-lo.com
-
-## 📁 Project Structure
-
-```
-equation-hi-lo.github.io/
-├── index.html          # Main website file
-├── styles.css          # All styling and responsive design
-├── script.js           # Equation optimizer and interactive features
-├── images/             # Website assets
-│   ├── README.md       # Instructions for adding images
-│   ├── game-screenshot.png  # Main game photo (to be added)
-│   └── hayzgames-logo.png   # Company logo (to be added)
-└── README.md          # This file
+```sh
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-## 🖼 Adding Images
+Open http://127.0.0.1:4173. Refresh after editing files.
 
-The website references two main images that need to be added to the `images/` directory:
+## Files
 
-1. **game-screenshot.png** - Main photo of your board game
-2. **hayzgames-logo.png** - Your company logo
+- `index.html`: product page, gameplay overview, interactive example, reviews, and FAQ.
+- `styles.css`: shared design and responsive layouts.
+- `site.js`: mobile navigation and interactive example.
+- `equation-optimizer.html` and `script.js`: arithmetic practice tool.
+- `images/`: local Etsy product photos, source notes, and favicon.
+- `fonts/`: self-hosted DM Sans and Fraunces with their licenses.
 
-See `images/README.md` for detailed instructions on extracting these from your current Wix website.
+## Verify the optimizer
 
-## 🌐 Deployment
-
-This website is automatically deployed to GitHub Pages. Any changes pushed to the main branch will be live within a few minutes.
-
-**Current URL**: https://yourusername.github.io/equation-hi-lo.github.io/
-
-## 🎯 Setting Up Custom Domain
-
-To use your custom domain (equation-hi-lo.com):
-
-1. Go to your repo's Settings > Pages
-2. Add your custom domain: `equation-hi-lo.com`
-3. Update your domain's DNS settings to point to GitHub Pages:
-   - Add CNAME record: `www.equation-hi-lo.com` → `yourusername.github.io`
-   - Add A records for apex domain to GitHub Pages IPs:
-     - 185.199.108.153
-     - 185.199.109.153  
-     - 185.199.110.153
-     - 185.199.111.153
-
-## 💰 Cost Savings
-
-**Before (Wix)**: $20/month + domain
-**After (GitHub Pages)**: $0/month + domain
-
-**Annual savings**: $240+ per year! 🎉
-
-## 🎮 Local Development
-
-To test locally:
-
-```bash
-# Navigate to project directory
-cd equation-hi-lo.github.io
-
-# Start local server
-python3 -m http.server 8080
-
-# Open in browser
-open http://localhost:8080
+```sh
+node tests/optimizer.test.cjs
 ```
 
-## 📧 Contact
+The sandbox uses each supplied number once, supports repeated numbers, and searches binary arithmetic expressions with parentheses. Operators may repeat; optional square roots apply to individual cards. It is a practice tool, not an implementation of every physical-game rule. The interface states these boundaries.
 
-Created by **HayzGames** - A couple from San Francisco passionate about board games!
+## Publishing
 
----
+Push the reviewed changes to the repository's GitHub Pages source branch to publish. Local previewing does not update the public website.
 
-*Migrated from Wix to GitHub Pages for better performance and cost savings.*
+Product photos and review excerpts came from the supplied Etsy listing. The developer story comes from the original website. See `images/README.md` for provenance and the one unresolved component-count discrepancy.

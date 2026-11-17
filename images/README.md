@@ -1,35 +1,16 @@
-# Images Directory
+# Image and content sources
 
-This directory should contain the following images from your original Wix website:
+Verified November 17, 2026 against the supplied [Equation Hi-Lo Etsy listing](https://www.etsy.com/listing/1839384898/equation-hi-lo-board-game).
 
-## Required Images:
+Product photographs are copied locally without editing; CSS controls their display crop.
 
-1. **game-screenshot.png** - The main screenshot of your board game (referenced in the hero section)
-2. **hayzgames-logo.png** - Your company logo (referenced in the about section)
+- `game-set.jpg`: https://i.etsystatic.com/56815839/r/il/007ec0/6596245480/il_794xN.6596245480_fusx.jpg
+- `cards.jpg`: https://i.etsystatic.com/56815839/r/il/a2a4eb/6644359567/il_794xN.6644359567_spa0.jpg
+- `gameplay.jpg`: https://i.etsystatic.com/56815839/r/il/cba882/6644359563/il_794xN.6644359563_hkyl.jpg
+- `favicon.svg`: new vector mark matching the website's wordmark.
 
-## How to Get Images from Your Wix Site:
+The two testimonial excerpts are attributed to Karlyn (April 29, 2026) and tuttlesoundlabs (December 31, 2025), both five-star item reviews visible on the listing. Karlyn's excerpt omits the opening “Thank you!”; the other review is reproduced in full. The former site's unverified Michael and Sarah quotes were removed.
 
-### Method 1: Browser Developer Tools (Recommended)
-1. Go to your Wix site: https://www.equation-hi-lo.com/
-2. Right-click on each image and select "Inspect Element" 
-3. In the developer tools, right-click on the `<img>` tag
-4. Select "Open image in new tab"
-5. Save the image with the appropriate filename
+The contents count is 24 starting operation cards plus 52 number, square-root, and multiplication cards, with 16 betting tokens. The listing description says 160 chips, while the packaging image says 180; the website intentionally avoids a chip count until the owner resolves this discrepancy. Live price, shipping, inventory, and aggregate review counts are left on Etsy.
 
-### Method 2: View Page Source
-1. Go to your Wix site
-2. Right-click and select "View Page Source"
-3. Search for image URLs (look for .jpg, .png, .webp extensions)
-4. Copy the full URLs and download the images
-
-### Method 3: Wix Editor (If you still have access)
-1. Log into your Wix editor
-2. Right-click on each image
-3. Select "Download" or "Save Image"
-
-## Recommended Image Specifications:
-- **game-screenshot.png**: 800x600px or larger, optimized for web
-- **hayzgames-logo.png**: 200x200px or smaller, transparent background preferred
-
-## Temporary Placeholders:
-The website is currently set up with placeholder images that will work until you add the actual images.
+Fonts are from Google Fonts (DM Sans and Fraunces), with SIL Open Font Licenses in `../fonts/`.
