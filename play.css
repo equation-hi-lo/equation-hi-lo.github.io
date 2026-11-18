@@ -1,0 +1,201 @@
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.play-main { padding-block: 48px 64px; }
+.play-heading { display: flex; align-items: center; justify-content: space-between; gap: 30px; margin-bottom: 32px; }
+.play-heading h1 { font-size: clamp(37px, 4.3vw, 56px); }
+.play-heading .eyebrow { margin-bottom: 13px; }
+.play-heading p:last-child { color: var(--muted); font-size: 14px; margin-top: 15px; }
+.practice-badge { display: flex; align-items: center; gap: 12px; flex-shrink: 0; font-size: 12px; }
+.practice-badge > span:first-child { color: var(--orange); font-size: 35px; }
+.practice-badge small { display: block; color: var(--muted); font-size: 10px; }
+.game-setup { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.setup-copy { background: var(--green); padding: 42px; }
+.setup-copy h2 { font-size: 39px; }
+.setup-copy > p:not(.eyebrow) { font-size: 14px; max-width: 380px; margin-top: 20px; color: #4b604f; }
+.setup-hand { display: flex; gap: 9px; margin-block: 33px; padding-left: 6px; }
+.setup-hand span { display: grid; place-items: center; width: 65px; height: 86px; background: var(--paper); border: 1px solid #b5c2a7; border-radius: 6px; font: 600 36px Fraunces, Georgia, serif; transform: rotate(-8deg); box-shadow: 0 4px 0 #bbc9a8; }
+.setup-hand span:nth-child(2) { transform: translateY(-5px) rotate(-3deg); color: var(--orange); }
+.setup-hand span:nth-child(3) { transform: translateY(-5px) rotate(4deg); }
+.setup-hand span:nth-child(4) { transform: rotate(9deg); color: var(--orange); }
+.setup-copy .setup-caption { font-size: 11px; margin-top: 0; }
+.setup-form { padding: 42px; background: #fcfbf6; }
+.difficulty-label, .pace-setting legend { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.setup-form .input-field { font-size: 12px; min-height: 47px; width: 100%; margin-block: 10px; }
+.field-help { color: var(--muted); font-size: 11px; }
+.pace-setting { border: 0; padding: 0; margin: 26px 0 0; }
+.checkbox-label { display: flex; align-items: center; gap: 10px; font-size: 13px; margin-block: 13px 6px; }
+.checkbox-label input { accent-color: var(--ink); width: 18px; height: 18px; }
+.start-game { width: 100%; margin-top: 27px; }
+.setup-small { text-align: center; color: var(--muted); font-size: 10px; margin-top: 12px; }
+.quiet-button { padding: 8px 3px; background: transparent; border: 0; color: var(--ink); font-size: 12px; font-weight: 600; min-height: 40px; }
+.quiet-button:hover:not(:disabled) { color: var(--orange); text-decoration: underline; text-underline-offset: 4px; }
+button:disabled { cursor: default; opacity: .4; transform: none; }
+.round-heading { display: flex; align-items: center; gap: 15px; margin-bottom: 14px; font-size: 13px; }
+.round-heading .quiet-button { margin-left: auto; font-weight: 400; }
+.phase-label { color: var(--muted); font-size: 11px; }
+.scoreboard { background: var(--ink); color: var(--paper); border-radius: 10px; display: grid; grid-template-columns: repeat(3, 1fr) 130px; padding: 20px 28px; margin-bottom: 22px; gap: 20px; }
+.player-score { display: flex; align-items: center; gap: 13px; }
+.player-score > strong { font: 600 32px Fraunces, Georgia, serif; }
+.player-score span { font-size: 12px; }
+.player-score small { display: block; font-size: 9px; color: #c4d0bf; }
+.player-score.active > strong { color: var(--yellow); }
+.pot-score { border-left: 1px solid #59715b; text-align: center; }
+.pot-score small { display: block; font-size: 9px; letter-spacing: .1em; color: #d1d9ce; }
+.pot-score strong { font: 600 32px Fraunces, Georgia, serif; color: var(--yellow); }
+.play-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 22px; align-items: start; }
+.table-workspace { min-width: 0; background: #fcfbf6; border: 1px solid var(--line); border-radius: 10px; padding: 28px; }
+.phase-heading .eyebrow { color: var(--orange); font-size: 9px; margin-bottom: 10px; }
+.phase-heading h2 { font-size: 31px; }
+.phase-heading > p:last-child { color: var(--muted); font-size: 12px; margin-top: 12px; }
+.hand-label { font-size: 9px; letter-spacing: .08em; margin: 23px 0 12px; font-weight: 600; }
+.hand { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.number-card { --card-bg: #eed7dc; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 61px; width: 70px; height: 91px; padding: 5px; border: 1px solid #6b726552; border-radius: 6px; background: var(--card-bg); color: var(--ink); box-shadow: 0 3px 0 #233e3514; }
+.number-card strong { font: 600 34px Fraunces, Georgia, serif; }
+.number-card small { font-size: 8px; }
+.number-card .private-card { position: absolute; top: 2px; right: 5px; font-size: 7px; font-weight: 600; letter-spacing: .04em; }
+.color-0 { --card-bg: #eed7dc; }
+.color-1 { --card-bg: #f4d2af; }
+.color-2 { --card-bg: #d9dddb; }
+.color-3 { --card-bg: #f1e2a5; }
+.card-back { background: repeating-linear-gradient(45deg, #294a3d, #294a3d 5px, #355647 5px, #355647 6px); color: var(--paper); }
+.card-back small { color: #d4ddce; }
+.number-card.is-used { opacity: .3; box-shadow: none; border-style: dashed; }
+button.number-card:hover:not(:disabled) { transform: translateY(-3px); }
+.operations { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 17px; }
+.operation-card { display: inline-grid; place-items: center; border: 1px solid #c5ceba; background: #f2f1e8; border-radius: 4px; color: var(--ink); width: 35px; height: 38px; font-size: 23px; }
+.operations small { font-size: 10px; color: var(--muted); }
+.table-actions { margin-top: 24px; border-top: 1px solid var(--line); padding-top: 22px; }
+.table-actions p { font-size: 12px; color: var(--muted); }
+.action-row { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+.secondary-button, .discard-button, .root-button, .marker-button { background: var(--paper); border: 1px solid #b7c2ab; border-radius: 5px; color: var(--ink); padding: 11px 17px; font-size: 12px; min-height: 44px; }
+.secondary-button:hover, .discard-button:hover, .root-button:hover { background: var(--green); }
+.discard-button { min-width: 65px; font-size: 24px; }
+.raise-form { display: flex; gap: 10px; align-items: end; margin-top: 18px; }
+.raise-form label { font-size: 10px; color: var(--muted); }
+.raise-form input { display: block; width: 88px; margin-top: 5px; padding: 9px; border: 1px solid #b7c2ab; border-radius: 4px; background: var(--paper); color: var(--ink); }
+.raise-form small { font-size: 10px; color: var(--muted); align-self: center; }
+.builder { margin-top: 24px; }
+.build-label { display: flex; justify-content: space-between; gap: 10px; font-size: 9px; margin-bottom: 12px; color: var(--muted); }
+.equation-slots { display: flex; align-items: center; gap: 6px; }
+.card-slot { flex: 1; min-width: 0; height: 68px; padding: 0; background: #eff1e8; border: 1px dashed #afbea3; border-radius: 5px; color: var(--muted); font-size: 10px; }
+.card-slot.is-filled { border-style: solid; background: var(--card-bg); color: var(--ink); font: 600 29px Fraunces, Georgia, serif; }
+.operation-picker { width: 44px; flex-shrink: 0; }
+.operation-picker select { width: 100%; padding: 6px 0; border: 0; background: transparent; font-size: 20px; color: var(--orange); cursor: pointer; }
+.root-options { margin: 17px 0; }
+.root-options p { font-size: 11px; color: var(--muted); margin-bottom: 9px; }
+.root-options > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.root-button { font-size: 11px; padding: 7px 10px; }
+.root-button[aria-pressed=true] { background: var(--ink); color: var(--paper); }
+.live-result { padding: 14px 16px; border-radius: 5px; background: #edf0e4; margin-top: 18px; font-size: 13px; min-height: 72px; }
+.live-result strong { font-size: 19px; }
+.live-result small { display: block; font-size: 10px; color: var(--muted); }
+.builder-tools { display: flex; align-items: center; gap: 13px; margin: 10px 0; }
+.builder-tools label { font-size: 10px; margin-left: auto; }
+.builder-tools select { padding: 6px; border: 1px solid var(--line); background: var(--paper); color: var(--ink); font-size: 11px; border-radius: 4px; }
+.hint-message { background: #f7ecd5; border-radius: 4px; padding: 12px; font-size: 12px; margin-bottom: 15px; }
+.order-reminder { font-size: 10px; color: var(--muted); margin-top: 13px; }
+.reveal-button { width: 100%; }
+.opponents { display: grid; gap: 14px; }
+.opponent { background: #e9eddc; border: 1px solid #d7ddc9; padding: 20px; border-radius: 9px; }
+.opponent h3 { font-size: 23px; display: flex; justify-content: space-between; align-items: center; }
+.opponent h3 small { font: 10px 'DM Sans',sans-serif; letter-spacing: 0; color: var(--muted); }
+.opponent .hand { gap: 8px; justify-content: start; margin-top: 16px; flex-wrap: nowrap; }
+.opponent .number-card { min-width: 0; width: 54px; height: 69px; flex: 1; max-width: 65px; }
+.opponent .number-card strong { font-size: 27px; }
+.opponent .operations { justify-content: start; gap: 6px; margin-top: 12px; }
+.opponent .operation-card { width: 25px; height: 28px; font-size: 19px; }
+.opponent.folded { opacity: .62; }
+.opponent-status { font-size: 11px; color: var(--muted); margin-top: 12px; }
+.table-log { margin-top: 15px; font-size: 11px; color: var(--muted); }
+.table-log summary { cursor: pointer; font-weight: 600; color: var(--ink); padding: 8px 0; }
+.table-log ol { padding-left: 22px; max-height: 230px; overflow: auto; }
+.table-log li { margin-block: 5px; }
+.marker-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-block: 20px; }
+.marker-button { padding: 15px 5px; font-weight: 600; }
+.marker-button strong { display: block; font: 600 30px Fraunces, Georgia, serif; margin-bottom: 6px; }
+.marker-button[aria-pressed=true] { background: var(--ink); color: var(--paper); }
+.swing-tabs { display: flex; gap: 8px; margin-top: 18px; }
+.swing-tabs button { flex: 1; }
+.swing-tabs button[aria-pressed=true] { background: var(--green); border-color: var(--ink); }
+.locked-equation { background: #edf0e4; border-radius: 5px; margin-top: 20px; padding: 16px; }
+.locked-equation p { font-size: 11px; color: var(--muted); }
+.locked-equation strong { display: block; font: 600 24px Fraunces, Georgia, serif; margin-block: 7px; }
+.showdown { margin-top: 22px; padding: 30px; border: 1px solid #c5cdb8; background: #e8edda; border-radius: 10px; }
+.showdown h2 { font-size: 34px; }
+.showdown > p { font-size: 13px; margin-top: 12px; }
+.result-players { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-block: 22px; }
+.result-player { padding: 20px; border: 1px solid #c5cdb8; background: #fafaf0; border-radius: 6px; min-width: 0; }
+.result-player h3 { font-size: 22px; margin-bottom: 8px; }
+.result-player p { font-size: 12px; margin-top: 6px; }
+.result-player .payout { color: var(--orange); font-weight: 600; }
+.result-player small { display: block; color: var(--muted); font-size: 10px; margin-top: 6px; }
+.learning-result { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid #c5cdb8; gap: 30px; padding-top: 22px; margin-top: 23px; }
+.learning-result h3 { font-size: 21px; margin-bottom: 13px; }
+.learning-result p, .learning-result li { font-size: 12px; }
+.learning-result ol { margin: 0; padding-left: 18px; }
+.finished-message { text-align: center; padding: 42px 20px; }
+.finished-message h2 { font-size: 39px; }
+.finished-message p { color: var(--muted); margin: 20px auto; max-width: 450px; font-size: 14px; }
+.game-error { padding: 15px; margin-top: 20px; border: 1px solid var(--orange); border-radius: 5px; color: var(--orange); font-size: 13px; }
+.practice-rules { margin-top: 29px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+.practice-rules summary { cursor: pointer; color: var(--ink); font-weight: 600; padding-block: 20px; }
+.rules-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.rules-grid h3 { font-size: 23px; color: var(--ink); margin-bottom: 14px; }
+.rules-grid p { margin-bottom: 14px; }
+.restart-dialog { max-width: 450px; width: calc(100% - 36px); padding: 32px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); color: var(--ink); }
+.restart-dialog::backdrop { background: #10271ec4; }
+.restart-dialog h2 { font-size: 32px; }
+.restart-dialog p:not(.eyebrow) { font-size: 13px; color: var(--muted); margin-block: 17px 25px; }
+.restart-dialog form > div { display: flex; gap: 20px; justify-content: space-between; }
+@media (max-width: 900px) {
+  .play-layout { grid-template-columns: minmax(0, 1fr); }
+  .opponents { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .game-setup { grid-template-columns: 1fr 1fr; }
+  .setup-copy, .setup-form { padding: 28px; }
+  .practice-badge { display: none; }
+  .rules-grid { grid-template-columns: 1fr; gap: 5px; }
+}
+@media (max-width: 600px) {
+  .play-main { padding-block: 30px 45px; }
+  .play-heading { margin-bottom: 25px; }
+  .play-heading h1 { font-size: 37px; }
+  .play-heading p:last-child { font-size: 12px; }
+  .game-setup { grid-template-columns: 1fr; }
+  .setup-copy h2 { font-size: 35px; }
+  .scoreboard { padding: 17px 15px; gap: 10px; grid-template-columns: repeat(3, 1fr); }
+  .player-score { flex-direction: column; gap: 2px; align-items: start; }
+  .player-score > strong { font-size: 28px; }
+  .pot-score { grid-column: 1 / -1; border-left: 0; border-top: 1px solid #59715b; padding-top: 10px; display: flex; justify-content: center; align-items: center; gap: 12px; }
+  .pot-score strong { font-size: 27px; }
+  .table-workspace { padding: 20px 16px; }
+  .phase-heading h2 { font-size: 28px; }
+  .hand { gap: 8px; }
+  .number-card { min-width: 0; width: 60px; height: 80px; }
+  .number-card strong { font-size: 31px; }
+  .equation-slots { gap: 3px; }
+  .card-slot { height: 60px; font-size: 9px; }
+  .card-slot.is-filled { font-size: 24px; }
+  .operation-picker { width: 32px; }
+  .operation-picker select { font-size: 17px; }
+  .builder-tools { flex-wrap: wrap; gap: 10px; }
+  .builder-tools label { margin-left: 0; }
+  .opponents { gap: 9px; }
+  .opponent { padding: 13px 10px; }
+  .opponent h3 { font-size: 21px; }
+  .opponent h3 small { font-size: 8px; }
+  .opponent .hand { gap: 4px; }
+  .opponent .number-card { height: 53px; padding: 2px; }
+  .opponent .number-card strong { font-size: 20px; }
+  .opponent .number-card small { font-size: 6px; }
+  .opponent .operations { gap: 4px; }
+  .opponent .operation-card { width: 21px; height: 26px; font-size: 17px; }
+  .opponent .operations small { font-size: 9px; }
+  .showdown { padding: 23px 17px; }
+  .result-players, .learning-result { grid-template-columns: 1fr; }
+  .result-player { padding: 17px; }
+  .raise-form { flex-wrap: wrap; }
+  .round-heading { gap: 9px; }
+  .round-heading > strong { white-space: nowrap; }
+  .phase-label { font-size: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { button { transition: none !important; } }

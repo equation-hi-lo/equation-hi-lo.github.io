@@ -4,34 +4,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Equation Optimizer · Equation Hi-Lo</title>
-  <meta name="description" content="Practice building equations close to 1 or 20 with the Equation Hi-Lo math sandbox.">
+  <meta name="description" content="Find your closest legal Equation Hi-Lo plays for both 1 and 20, and discover exact swing opportunities.">
   <meta name="theme-color" content="#233e35">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=db3a8d4faae0">
   <script src="site.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=d71f54ded502" type="module"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="container header-inner">
     <a class="brand" href="index.html" aria-label="Equation Hi-Lo home"><span class="brand-mark" aria-hidden="true">↗<br>↙</span><span>equation<span class="brand-sub">HI–LO <span>by HayzGames</span></span></span></a>
     <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">＋</span></button>
-    <nav id="navigation" class="navigation" aria-label="Main navigation"><a href="index.html#how-to-play">How to play</a><a href="index.html#in-the-box">In the box</a><a href="index.html#reviews">Reviews</a><a href="equation-optimizer.html" aria-current="page">Equation optimizer ↗</a><a class="button button-small" href="https://www.etsy.com/listing/1839384898/equation-hi-lo-board-game" target="_blank" rel="noopener noreferrer">Get the game <span aria-hidden="true">↗</span></a></nav>
+    <nav id="navigation" class="navigation" aria-label="Main navigation"><a href="index.html#how-to-play">How to play</a><a href="index.html#math-practice">For families</a><a href="play.html">Play online</a><a href="equation-optimizer.html" aria-current="page">Equation optimizer ↗</a><a class="button button-small" href="https://www.etsy.com/listing/1839384898/equation-hi-lo-board-game" target="_blank" rel="noopener noreferrer">Get the game <span aria-hidden="true">↗</span></a></nav>
   </div></header>
   <main id="main" class="optimizer-main container section">
-    <div class="optimizer-heading"><p class="eyebrow">A LITTLE PRACTICE. A FEW POSSIBILITIES.</p><h1>Find your next move.</h1><p>Pick your numbers, choose a target, and explore the equations hiding in your hand.</p></div>
+    <div class="optimizer-heading"><p class="eyebrow">A LITTLE PRACTICE. A FEW POSSIBILITIES.</p><h1>Find your next move.</h1><p>Enter your cards. Find your closest low and high plays—and see whether an exact swing is possible.</p><a class="text-link optimizer-play-link" href="play.html">Put your practice to the test: play the computer <span aria-hidden="true">↗</span></a></div>
     <div class="optimizer-interface">
       <form class="input-section" id="optimizer-form" novalidate>
-        <h2>Your practice hand</h2>
-        <label for="numbers">Number cards</label><input class="input-field" type="text" id="numbers" name="numbers" value="1, 3, 4, 8" placeholder="e.g. 1, 3, 4, 8" aria-describedby="number-help" autocomplete="off" required><small id="number-help">Enter 1–4 whole numbers from 1 to 10, separated by commas or spaces.</small>
-        <fieldset><legend>Available operations</legend><div class="operation-checkboxes"><label><input type="checkbox" name="operation" value="add" checked> + Add</label><label><input type="checkbox" name="operation" value="subtract" checked> − Subtract</label><label><input type="checkbox" name="operation" value="multiply" checked> × Multiply</label><label><input type="checkbox" name="operation" value="divide" checked> ÷ Divide</label><label><input type="checkbox" name="operation" value="sqrt"> √ Square root</label></div></fieldset>
-        <label for="target">Your target</label><select class="input-field" id="target" name="target"><option value="1">Go low — closest to 1</option><option value="20">Go high — closest to 20</option></select>
+        <h2>Your four-card hand</h2>
+        <label for="numbers">Number cards</label><input class="input-field" type="text" id="numbers" name="numbers" value="1, 3, 4, 8" placeholder="e.g. 1, 3, 4, 8" aria-describedby="number-help" autocomplete="off" required><small id="number-help">Enter exactly four whole numbers from 0 to 10, separated by commas or spaces.</small>
+        <fieldset aria-describedby="operation-help"><legend>Your operation cards</legend><div class="operation-checkboxes"><label><input type="checkbox" id="add" name="operation" value="add" checked disabled> + Add</label><label><input type="checkbox" id="subtract" name="operation" value="subtract" checked disabled> − Subtract</label><label><input type="checkbox" id="divide" name="operation" value="divide" checked disabled> ÷ Divide (required)</label><label><input type="checkbox" id="multiply" name="operation" value="multiply"> × Multiply</label><label><input type="checkbox" id="sqrt" name="operation" value="sqrt"> √ Square root (one card)</label></div><p id="operation-help" class="operation-help" role="status" aria-live="polite">Start with +, −, and ÷. To use ×, select it and uncheck + or −.</p></fieldset>
         <button class="button optimize-button" type="submit">Find equations <span aria-hidden="true">↗</span></button>
-        <p class="sandbox-note">This is a math sandbox: it uses every number once, allows parentheses, and can repeat operations. Square roots apply to individual numbers. Follow your rulebook’s card restrictions during a game.</p>
+        <p class="sandbox-note">Use all four numbers and every selected operation exactly once. No parentheses. Multiply and divide before adding and subtracting. If selected, √ applies to exactly one number; division by zero is never allowed.</p>
       </form>
-      <section class="results-section" aria-labelledby="results-heading"><h2 id="results-heading">Your possibilities</h2><div id="results" class="results-container" role="status" aria-live="polite" aria-atomic="true"><p>Your next clever move starts here. Choose a target and select “Find equations” to explore your hand.</p></div></section>
+      <section class="results-section" aria-labelledby="results-heading"><h2 id="results-heading">Your possibilities</h2><div id="results" class="results-container" role="status" aria-live="polite" aria-atomic="true"><p>Your next clever move starts here. Select “Find equations” to explore both low and high.</p></div></section>
     </div>
   </main>
-  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="index.html">equation HI–LO<span>Made with a little math & a lot of heart.</span></a><div><a href="index.html">← Back to the game</a><a href="https://www.etsy.com/shop/HayzGames" target="_blank" rel="noopener noreferrer">HayzGames on Etsy ↗</a></div><small>© <span data-year>2026</span> HayzGames</small></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="index.html">equation HI–LO<span>Made with a little math & a lot of heart.</span></a><div><a href="play.html">Play online</a><a href="index.html">← Back to the game</a><a href="https://www.etsy.com/shop/HayzGames" target="_blank" rel="noopener noreferrer">HayzGames on Etsy ↗</a></div><small>© <span data-year>2026</span> HayzGames</small></div></footer>
 </body>
 </html>

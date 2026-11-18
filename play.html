@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Play Against the Computer · Equation Hi-Lo</title>
+  <meta name="description" content="Play Equation Hi-Lo against two computer opponents. Build equations, bet play chips, and choose low, high, or swing. Free, with optional math hints.">
+  <meta name="theme-color" content="#233e35">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="play.css">
+  <script src="site.js" defer></script>
+  <script src="play.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="Equation Hi-Lo home"><span class="brand-mark" aria-hidden="true">↗<br>↙</span><span>equation<span class="brand-sub">HI–LO <span>by HayzGames</span></span></span></a>
+    <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menu <span aria-hidden="true">＋</span></button>
+    <nav id="navigation" class="navigation" aria-label="Main navigation"><a href="index.html#how-to-play">How to play</a><a href="index.html#math-practice">For families</a><a href="play.html" aria-current="page">Play online</a><a href="equation-optimizer.html">Equation optimizer ↗</a><a class="button button-small" href="https://www.etsy.com/listing/1839384898/equation-hi-lo-board-game" target="_blank" rel="noopener noreferrer">Get the game <span aria-hidden="true">↗</span></a></nav>
+  </div></header>
+  <main id="main" class="container play-main">
+    <div class="play-heading"><div><p class="eyebrow">A LITTLE MATH. A LITTLE NERVE.</p><h1>Your seat at the table.</h1><p>Build an equation. Read the table. Go low, high, or both.</p></div><div class="practice-badge"><span aria-hidden="true">✳</span><span>Play & learn<small>No timer. Room to think.</small></span></div></div>
+    <section id="setup" class="game-setup" aria-labelledby="setup-heading">
+      <div class="setup-copy"><p class="eyebrow">PULL UP A CHAIR.</p><h2 id="setup-heading">Three players.<br>Two ways to win.</h2><p>Join Milo and Pip for Equation Hi-Lo. You each get your own cards and 20 play chips. Make an equation close to 1 or 20—or try a swing for both.</p><div class="setup-hand" aria-hidden="true"><span>1</span><span>+</span><span>20</span><span>√</span></div><p class="setup-caption">One hidden card. Three open cards. Your move.</p></div>
+      <form id="match-settings" class="setup-form">
+        <label class="difficulty-label" for="difficulty">01 / Set the challenge</label><select class="input-field" id="difficulty" aria-describedby="difficulty-help"><option value="friendly">Friendly — a little room to learn</option><option value="challenge">Challenge — finds its closest equations</option></select><p id="difficulty-help" class="field-help">Friendly opponents choose from their three closest results. Each computer only uses its own hand to plan.</p>
+        <fieldset class="pace-setting"><legend>02 / Set the pace</legend><label class="checkbox-label"><input id="skip-first-bet" type="checkbox"> Skip the first betting round</label><p class="field-help">A faster start, straight to four cards. Final betting still applies.</p></fieldset>
+        <button class="button start-game" type="submit">Deal me in <span aria-hidden="true">↗</span></button><p class="setup-small">Free to play · Play chips only · No account needed</p>
+      </form>
+    </section>
+    <section id="match" hidden aria-label="Your Equation Hi-Lo table"></section>
+    <p id="game-error" class="game-error" role="alert" hidden></p>
+    <details class="practice-rules"><summary>The rules at this table</summary><div class="rules-grid"><div><h3>Deal & build</h3><p>Start with +, −, and ÷. Ante one chip, then receive one hidden number and two open numbers. After the first bet, take your last open number. Use all four numbers and every operation once, with normal order of operations and no parentheses.</p><p>A drawn × replaces +, −, or ×; you always keep ÷. A √ must be placed on a number. Special cards get a replacement number; extra specials in that replacement draw are discarded.</p></div><div><h3>Bet & reveal</h3><p>Check, call, raise, or fold. The lowest chip stack sets the betting limit. Lock your equation before the final bet, then secretly choose low (1), high (20), or swing. Swing uses two arrangements and must win both sides to receive anything.</p><p>High and low winners split the pot; an odd chip is discarded. One qualifying side takes the whole pot. If all swings fail and nobody qualifies, the pot carries forward.</p></div><div><h3>Break a tie</h3><p>Equal distance? High favors the highest number card, then its color: Yellow Giraffe → Grey Elephant → Orange Tiger → Pink Mouse. Low favors the lowest number, then the reverse color order.</p><p>Cards run from 0 to 10 in all four colors. This table uses four × and four √ cards, for a 52-card deck. You need five chips to enter another hand. The match ends when you cannot enter, or no opponent can.</p></div></div></details>
+    <noscript><p class="noscript-message">This game needs JavaScript. Enable it in your browser, or <a href="index.html#how-to-play">read how the physical game works</a>.</p></noscript>
+  </main>
+  <dialog id="restart-dialog" class="restart-dialog"><form method="dialog"><p class="eyebrow">A FRESH HAND?</p><h2>Start a new match?</h2><p>Your cards and chip stacks will be reset.</p><div><button class="quiet-button" value="cancel">Keep playing</button><button class="button" value="restart">Start fresh ↗</button></div></form></dialog>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="index.html">equation HI–LO<span>Made with a little math & a lot of heart.</span></a><div><a href="equation-optimizer.html">Equation optimizer</a><a href="https://www.etsy.com/shop/HayzGames" target="_blank" rel="noopener noreferrer">HayzGames on Etsy ↗</a></div><small>© <span data-year>2026</span> HayzGames</small></div></footer>
+</body>
+</html>
